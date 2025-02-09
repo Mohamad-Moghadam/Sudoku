@@ -6,7 +6,6 @@ the menu is located in this file
 """
 
 import json
-import pprint
 from random import randint
 
 
@@ -44,14 +43,19 @@ def game(difficulty):
 
     if difficulty == 1:
         a = randint(1, 10)
-        b = randint(1, 10) - (a)
-        c = randint(1, 10) - (a) - (b)
+        b = randint(1, 10)
+        c = randint(1, 10)
+        while b == a or b == c or a == c:
+            b = randint(1, 10)
+            c = randint(1, 10)
         row1 = [
             [None, None, a],
             [None, c, None],
-            [None, None, b][None, b, None],
+            [None, None, b],
+            [None, b, None],
             [a, None, None],
-            [None, None, c][c, None, None],
+            [None, None, c],
+            [c, None, None],
             [b, None, None],
             [None, a, None],
         ]
@@ -59,9 +63,11 @@ def game(difficulty):
         row2 = [
             [None, None, None],
             [None, None, a],
-            [c, b, None][None, None, c],
+            [c, b, None],
+            [None, None, c],
             [None, b, None],
-            [None, None, a][None, a, b],
+            [None, None, a],
+            [None, a, b],
             [None, None, c],
             [None, None, None],
         ]
@@ -69,9 +75,11 @@ def game(difficulty):
         row3 = [
             [None, c, None],
             [None, None, b],
-            [a, None, None][a, None, None],
+            [a, None, None],
+            [a, None, None],
             [c, None, None],
-            [b, None, None][b, None, None],
+            [b, None, None],
+            [b, None, None],
             [None, a, None],
             [None, c, None],
         ]
