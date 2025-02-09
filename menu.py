@@ -39,6 +39,20 @@ def menu():
             return
 
 
+"""
+Here is the menu of the game and where the first sheet is generated.
+
+
+returns
+--------
+json:
+    shows the content of the json file
+    
+int:
+    passes the level of difficulty to the game function.
+    """
+
+
 def game(difficulty):
 
     if difficulty == 1:
@@ -170,5 +184,19 @@ def game(difficulty):
 
         return row1, row2, row3
 
+
+"""
+
+here is the start of the game.
+depending on the number, it gives the list of the sheet.
+
+---------------
+parameters:
+difficulty (int): The level of difficulty chosen in menu function.
+
+---------------
+three lists:
+    each list belongs to a row.
+    """
 
 menu()
