@@ -84,7 +84,91 @@ def game(difficulty):
             [None, c, None],
         ]
 
-        print(row1, row2, row3)
+        return row1, row2, row3
+
+    elif difficulty == 2:
+        a = randint(1, 10)
+        b = randint(1, 10)
+        while b == a:
+            b = randint(1, 10)
+        row1 = [
+            [None, None, a],
+            [None, None, None],
+            [None, None, b],
+            [None, b, None],
+            [a, None, None],
+            [None, None, None],
+            [None, None, None],
+            [b, None, None],
+            [None, a, None],
+        ]
+
+        row2 = [
+            [None, None, None],
+            [None, None, a],
+            [None, b, None],
+            [None, None, None],
+            [None, b, None],
+            [None, None, a],
+            [None, a, b],
+            [None, None, None],
+            [None, None, None],
+        ]
+
+        row3 = [
+            [None, None, None],
+            [None, None, b],
+            [a, None, None],
+            [a, None, None],
+            [None, None, None],
+            [b, None, None],
+            [b, None, None],
+            [None, a, None],
+            [None, None, None],
+        ]
+
+        return row1, row2, row3
+
+    elif difficulty == 3:
+        a = randint(1, 10)
+
+        row1 = [
+            [None, None, a],
+            [None, None, None],
+            [None, None, None],
+            [None, None, None],
+            [a, None, None],
+            [None, None, None],
+            [None, None, None],
+            [None, None, None],
+            [None, a, None],
+        ]
+
+        row2 = [
+            [None, None, None],
+            [None, None, a],
+            [None, None, None],
+            [None, None, None],
+            [None, None, None],
+            [None, None, a],
+            [None, a, None],
+            [None, None, None],
+            [None, None, None],
+        ]
+
+        row3 = [
+            [None, None, None],
+            [None, None, None],
+            [a, None, None],
+            [a, None, None],
+            [None, None, None],
+            [None, None, None],
+            [None, None, None],
+            [None, a, None],
+            [None, None, None],
+        ]
+
+        return row1, row2, row3
 
 
 menu()
