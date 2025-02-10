@@ -11,14 +11,21 @@ in this file we change the colours of the numbers to be more user friendly.
 
 
 def printing(board):
-    for i in range(81):
-        if i == 0:
-            for j in range(81):
-                if j == 0 or j % 2 == 0:
-                    print(
-                        f"{board[0][0]}│{board[1][0]}│{board[2][0]}│{board[3][0]}│{board[4][0]}│{board[5][0]}│{board[6][0]}│{board[7][0]}│{board[8][0]}"
-                    )
-                    print("─" * 40)
-                elif j % 2 == 1:
-                    f"{board[0][0]}│{board[1][0]}│{board[2][0]}│{board[3][0]}│{board[4][0]}│{board[5][0]}│{board[6][0]}│{board[7][0]}│{board[8][0]}"
+    for i in range(len(board)):
+        if board[i] == None:
+            board[i] = " "
+        if (
+            i % 3 == 2
+            and i != 8
+            and i != 17
+            and i != 26
+            and i != 35
+            and i != 44
+            and i != 53
+            and i != 62
+            and i != 71
+            and i != 80
+        ):
+            print(f"{board[i]}│")
+
         print()
