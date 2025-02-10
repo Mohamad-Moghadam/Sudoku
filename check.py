@@ -29,11 +29,16 @@ def check_empty(Arr):
 
 def check_number_row_col(Arr):
     for row in range(9):
+        seen = set()
         for col in range(9):
-            if Arr[row][col] == Arr[row][col]:
-                return False
-    else:
-        return True
+            num = Arr[row][col]
+            if num != None:
+                if num in seen:
+                    return False
+                seen.add(num)
+
+
+
 
 def check_3x3_square(Arr):
     for row in range(0, 9, 3):
@@ -41,7 +46,7 @@ def check_3x3_square(Arr):
             unique_numbers = set()
             for x in range(row, row + 3):
                 for y in range(col, col + 3):
-                    if Arr[x][y] == 0:
+                    if Arr[x][y] == None:
                         continue
                     if Arr[x][y] in unique_numbers:
                         return False
