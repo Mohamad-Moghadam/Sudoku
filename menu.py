@@ -92,7 +92,16 @@ def game(difficulty):
             [None, a, None],
             [None, c, None],
         ]
-        update(board)
+        printing(board)
+
+        print(
+            f"please enter the number of row, column and the number you want to place:\n"
+        )
+        place = list(map(int, input().split()))
+        board = update(board, place)
+
+        printing(board)
+        check_empty(board)
 
     elif difficulty == 2:
         a = randint(1, 10)
@@ -128,7 +137,16 @@ def game(difficulty):
             [None, a, None],
             [None, None, None],
         ]
-        update(board)
+        printing(board)
+
+        print(
+            f"please enter the number of row, column and the number you want to place:\n"
+        )
+        place = list(map(int, input().split()))
+        board = update(board, place)
+
+        printing(board)
+        check_empty(board)
 
     elif difficulty == 3:
         a = randint(1, 10)
