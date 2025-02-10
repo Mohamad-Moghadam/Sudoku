@@ -5,6 +5,7 @@ the menu is located in this file
 
 """
 
+from placement import *
 import json
 from random import randint
 
@@ -91,8 +92,7 @@ def game(difficulty):
             [None, a, None],
             [None, c, None],
         ]
-
-        return board
+        update(board)
 
     elif difficulty == 2:
         a = randint(1, 10)
@@ -128,8 +128,7 @@ def game(difficulty):
             [None, a, None],
             [None, None, None],
         ]
-
-        return board
+        update(board)
 
     elif difficulty == 3:
         a = randint(1, 10)
@@ -163,8 +162,16 @@ def game(difficulty):
             [None, a, None],
             [None, None, None],
         ]
+        printing(board)
 
-        return board
+        print(
+            f"please enter the number of row, column and the number you want to place:\n"
+        )
+        place = list(map(int, input().split()))
+        board = update(board, place)
+
+        printing(board)
+        check(board)
 
 
 """
