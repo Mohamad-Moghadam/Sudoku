@@ -171,7 +171,7 @@ def game(difficulty):
         board = update(board, place)
 
         printing(board)
-        check(board)
+        check_empty(board)
 
 
 """
