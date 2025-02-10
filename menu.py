@@ -6,6 +6,7 @@ the menu is located in this file
 """
 
 from placement import *
+from colours import *
 import json
 from random import randint
 
