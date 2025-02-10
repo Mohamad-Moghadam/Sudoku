@@ -62,7 +62,7 @@ def game(difficulty):
         while b == a or b == c or a == c:
             b = randint(1, 10)
             c = randint(1, 10)
-        row1 = [
+        board = [
             [None, None, a],
             [None, c, None],
             [None, None, b],
@@ -72,9 +72,6 @@ def game(difficulty):
             [c, None, None],
             [b, None, None],
             [None, a, None],
-        ]
-
-        row2 = [
             [None, None, None],
             [None, None, a],
             [c, b, None],
@@ -84,9 +81,6 @@ def game(difficulty):
             [None, a, b],
             [None, None, c],
             [None, None, None],
-        ]
-
-        row3 = [
             [None, c, None],
             [None, None, b],
             [a, None, None],
@@ -98,14 +92,14 @@ def game(difficulty):
             [None, c, None],
         ]
 
-        return row1, row2, row3
+        return board
 
     elif difficulty == 2:
         a = randint(1, 10)
         b = randint(1, 10)
         while b == a:
             b = randint(1, 10)
-        row1 = [
+        board = [
             [None, None, a],
             [None, None, None],
             [None, None, b],
@@ -115,9 +109,6 @@ def game(difficulty):
             [None, None, None],
             [b, None, None],
             [None, a, None],
-        ]
-
-        row2 = [
             [None, None, None],
             [None, None, a],
             [None, b, None],
@@ -127,9 +118,6 @@ def game(difficulty):
             [None, a, b],
             [None, None, None],
             [None, None, None],
-        ]
-
-        row3 = [
             [None, None, None],
             [None, None, b],
             [a, None, None],
@@ -141,12 +129,12 @@ def game(difficulty):
             [None, None, None],
         ]
 
-        return row1, row2, row3
+        return board
 
     elif difficulty == 3:
         a = randint(1, 10)
 
-        row1 = [
+        board = [
             [None, None, a],
             [None, None, None],
             [None, None, None],
@@ -156,9 +144,6 @@ def game(difficulty):
             [None, None, None],
             [None, None, None],
             [None, a, None],
-        ]
-
-        row2 = [
             [None, None, None],
             [None, None, a],
             [None, None, None],
@@ -168,9 +153,6 @@ def game(difficulty):
             [None, a, None],
             [None, None, None],
             [None, None, None],
-        ]
-
-        row3 = [
             [None, None, None],
             [None, None, None],
             [a, None, None],
@@ -182,7 +164,7 @@ def game(difficulty):
             [None, None, None],
         ]
 
-        return row1, row2, row3
+        return board
 
 
 """
