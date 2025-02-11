@@ -68,12 +68,12 @@ int:
 def game(difficulty):
 
     if difficulty == 1:
-        a = randint(1, 10)
-        b = randint(1, 10)
-        c = randint(1, 10)
+        a = randint(1, 9)
+        b = randint(1, 9)
+        c = randint(1, 9)
         while b == a or b == c or a == c:
-            b = randint(1, 10)
-            c = randint(1, 10)
+            b = randint(1, 9)
+            c = randint(1, 9)
         board = [
             [None, None, a, None, c, None, None, None, b],
             [None, b, None, a, None, None, None, None, c],
@@ -97,10 +97,10 @@ def game(difficulty):
         check_empty(board)
 
     elif difficulty == 2:
-        a = randint(1, 10)
-        b = randint(1, 10)
+        a = randint(1, 9)
+        b = randint(1, 9)
         while b == a:
-            b = randint(1, 10)
+            b = randint(1, 9)
         board = board = [
             [None, None, a, None, None, None, None, None, b],
             [None, b, None, a, None, None, None, None, None],
@@ -124,7 +124,7 @@ def game(difficulty):
         check_empty(board)
 
     elif difficulty == 3:
-        a = randint(1, 10)
+        a = randint(1, 9)
 
         board = board = [
             [None, None, a, None, None, None, None, None, None],
