@@ -195,6 +195,8 @@ def printing(board):
             print(f"{board[i]}│", end="")
         else:
             print(f"{board[i]}", end="")
+        if i == 26 or i == 53:
+            print("___________")
 
 
 printing(board)
