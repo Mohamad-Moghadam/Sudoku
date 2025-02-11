@@ -15,13 +15,13 @@ def menu():
     while True:
         print("What is your name? ")
         name = input()
-        with open(
+        """with open(
             "C:/Users/USER/Desktop/kelassor/3rd week/Sudoku/statistics.json",
             "a",
             encoding="utf-8",
         ) as file:
             json.dump(name, file)
-
+"""
         print(f"\nWelcome {name}. \n1. Start game \n2. Statistics \n3. Exit game\n ")
         choice = int(input())
 
@@ -38,7 +38,7 @@ def menu():
                 game(3)
             elif game_mode == 4:
                 return
-            elif choice == 2:
+            """elif choice == 2:
                 with open(
                     "C:/Users/USER/Desktop/kelassor/3rd week/Sudoku/statistics.json",
                     "r",
@@ -46,7 +46,7 @@ def menu():
                 ) as file:
                     data = json.load(file)
                 print(data)
-                return
+                return"""
         elif choice == 3:
             return
 

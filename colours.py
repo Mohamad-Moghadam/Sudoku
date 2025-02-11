@@ -10,17 +10,13 @@ in this file we change the colours of the numbers to be more user friendly.
 
 def printing(board):
     for i in range(len(board)):
+        if i % 3 == 0 and i != 0:  # Print horizontal separator every 3 rows
+            print("-------------------------------------")
         for j in range(len(board[i])):
-            if board[i][j] == None:
-                board[i][j] = " "
-            elif j % 3 == 2:
-                print(f"{board[i][j]}│", end="")
-            else:
-                print(f"{board[i][j]}", end="")
-        if i % 3 == 2:
-            print(f"\n___________")
-        else:
-            print()
+            cell = str(board[i][j]) if board[i][j] is not None else " "
+            end_char = " │ " if (j + 1) % 3 == 0 and j != 8 else " "
+            print(cell.center(3), end=end_char)
+        print()
 
 
 """if board[i] == None:
