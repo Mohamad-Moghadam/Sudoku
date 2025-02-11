@@ -30,4 +30,4 @@ def printing(board):
         else:
             print(f"{board[i]}", end="")
         if i == 26 or i == 53:
-            print("-----------")
+            print("___________")
