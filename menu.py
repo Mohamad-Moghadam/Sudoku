@@ -44,7 +44,7 @@ def menu():
                     "r",
                     encoding="utf-8",
                 ) as file:
-                    data = json.load(file)
+                    data = json.dumps(file)
                 print(data)
                 return
         elif choice == 3:
