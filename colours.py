@@ -29,7 +29,10 @@ def printing(board):
                 print(f"{board[i][j]}│", end="")
             else:
                 print(f"{board[i][j]}", end="")
-        print("___________")
+        if i % 3 == 2:
+            print(f"\n___________")
+        else:
+            print()
 
 
 printing(board)
