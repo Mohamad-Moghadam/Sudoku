@@ -7,18 +7,6 @@ in this file we change the colours of the numbers to be more user friendly.
 
 """
 
-board = [
-    [3, 0, 6, 5, 0, 8, 4, 0, 0],
-    [5, 2, 0, 0, 0, 0, 0, 0, 0],
-    [0, 8, 7, 0, 0, 0, 0, 3, 1],
-    [0, 0, 3, 0, 1, 0, 0, 8, 0],
-    [9, 0, 0, 8, 6, 3, 0, 0, 5],
-    [0, 5, 0, 0, 9, 0, 6, 0, 0],
-    [1, 3, 0, 0, 0, 0, 2, 5, 0],
-    [0, 0, 0, 0, 0, 0, 9, 7, 4],
-    [0, 0, 5, 2, 0, 6, 3, 0, 9],
-]
-
 
 def printing(board):
     for i in range(len(board)):
@@ -33,9 +21,6 @@ def printing(board):
             print(f"\n___________")
         else:
             print()
-
-
-printing(board)
 
 
 """if board[i] == None:
