@@ -102,7 +102,7 @@ def game(difficulty):
         while b == a:
             b = randint(1, 10)
         board = board = [
-            [None, None, a, None, c, None, None, None, b],
+            [None, None, a, None, None, None, None, None, b],
             [None, b, None, a, None, None, None, None, None],
             [None, None, None, b, None, None, None, a, None],
             [None, None, None, None, None, a, None, b, None],
