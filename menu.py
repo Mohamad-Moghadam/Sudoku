@@ -5,6 +5,7 @@ the menu is located in this file
 
 """
 
+from check import *
 from placement import *
 from colours import *
 import json
@@ -94,7 +95,8 @@ def game(difficulty):
         board = update(board, place)
 
         printing(board)
-        check_empty(board)
+        check_number_row_col(board)
+        check_3x3_square(board)
 
     elif difficulty == 2:
         a = randint(1, 9)
@@ -121,7 +123,8 @@ def game(difficulty):
         board = update(board, place)
 
         printing(board)
-        check_empty(board)
+        check_number_row_col(board)
+        check_3x3_square(board)
 
     elif difficulty == 3:
         a = randint(1, 9)
@@ -146,7 +149,8 @@ def game(difficulty):
         board = update(board, place)
 
         printing(board)
-        check_empty(board)
+        check_number_row_col(board)
+        check_3x3_square(board)
 
 
 """
