@@ -176,26 +176,25 @@ board = [
 
 def printing(board):
     for i in range(len(board)):
-        for _ in range(9):
-            if board[i] == None:
-                board[i] = " "
-            if (
-                i % 3 == 2
-                and i != 8
-                and i != 17
-                and i != 26
-                and i != 35
-                and i != 44
-                and i != 53
-                and i != 62
-                and i != 71
-                and i != 80
-            ):
-                print(f"{board[i]}│", end="")
-                i += 1
+        if board[i] == None:
+            board[i] = " "
+        if i % 9 == 8:
+            print(f"{board[i]}")
+        elif (
+            i % 3 == 2
+            and i != 8
+            and i != 17
+            and i != 26
+            and i != 35
+            and i != 44
+            and i != 53
+            and i != 62
+            and i != 71
+            and i != 80
+        ):
+            print(f"{board[i]}│", end="")
         else:
             print(f"{board[i]}", end="")
-            i += 1
 
 
 printing(board)
