@@ -5,22 +5,18 @@ in this file, we decide where the player have set their numbers and whether it i
 """
 
 
-def placement(board, locat_list):
+def update(board, locat_list):
     row = locat_list[0]
     col = locat_list[1]
     num = locat_list[2]
-    if 1 <= num <= 9:
-        if 1 <= row <= 9:
-            if 1 <= col <= 9:
-                board[row - 1][col - 1] = num
-            else:
-                print("your row is out of range")
-        else:
-            print("your col is out of range")
+    if 1 <= row <= 9 and 1 <= col <= 9 and 1 <= num <= 9:
+        board[row - 1][col - 1] = num
     else:
-        print("your num is out of range")
-
+        print("your input is out of range")
     return board
+
+
+
 
 
 
