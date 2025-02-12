@@ -18,11 +18,13 @@ def update(board, inserted, a, b, c):
     return board
 
 
-def colours(board, row, column, inserted_value):
+def colours(board, row, column, value):
+    is_valid = check_number_row_col(board) and check_3x3_square(board)
+    print("Conditions valid:", is_valid)
     if check_number_row_col(board) and check_3x3_square(board):
-        board[row][column] = f"\033[92m{inserted_value}\033[0m"
+        board[row][column] = f"\033[92m{value}\033[0m"
     else:
-        board[row][column] = f"\033[91m{inserted_value}\033[0m"
+        board[row][column] = f"\033[91m{value}\033[0m"
     return board
 
     """

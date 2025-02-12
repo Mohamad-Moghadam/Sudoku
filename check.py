@@ -34,7 +34,7 @@ def check_number_row_col(Arr):
         seen = set()
         for col in range(9):
             num = Arr[row][col]
-            if num != 0:
+            if num != 0 and num is not None:
                 if num in seen:
                     return False
                 seen.add(num)
@@ -43,7 +43,7 @@ def check_number_row_col(Arr):
         seen = set()
         for row in range(9):
             num = Arr[row][col]
-            if num != 0:
+            if num != 0 and num is not None:
                 if num in seen:
                     return False
                 seen.add(num)
