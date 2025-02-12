@@ -72,7 +72,7 @@ def game(difficulty):
             place = list(map(int, input().split()))
             place[0] = place[0] - 1
             place[1] = place[1] - 1
-            board = update(board, place)
+            board = update(board, place, a, b, c)
             print(f"\n")
             printing(board, a, b, c)
             check_number_row_col(board)
@@ -112,7 +112,7 @@ def game(difficulty):
     elif difficulty == 3:
         a = randint(1, 9)
 
-        board = board = [
+        board = [
             [None, None, a, None, None, None, None, None, None],
             [None, None, None, a, None, None, None, None, None],
             [None, None, None, None, None, None, None, a, None],
