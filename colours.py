@@ -2,6 +2,8 @@
 in this file we change the colours of the numbers to be more user friendly.
 """
 
+from check import *
+
 
 def printing(Arr, a, b, c):
     for i in range(9):
