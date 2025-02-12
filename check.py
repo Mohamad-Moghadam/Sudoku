@@ -16,7 +16,7 @@ in this file, it is checked whether the game has come to an end or not.
 def check_empty(Arr):
     for row in range(9):
         for col in range(9):
-            if Arr[row][col] == None:
+            if Arr[row][col] == 0:
                 return True
     else:
         return False
@@ -34,7 +34,7 @@ def check_number_row_col(Arr):
         seen = set()
         for col in range(9):
             num = Arr[row][col]
-            if num != None:
+            if num is not None:
                 if num in seen:
                     return False
                 seen.add(num)
@@ -43,7 +43,7 @@ def check_number_row_col(Arr):
         seen = set()
         for row in range(9):
             num = Arr[row][col]
-            if num != None:
+            if num is not None:
                 if num in seen:
                     return False
                 seen.add(num)
