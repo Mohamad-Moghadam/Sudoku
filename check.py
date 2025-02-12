@@ -16,7 +16,7 @@ in this file, it is checked whether the game has come to an end or not.
 def check_empty(Arr):
     for row in range(9):
         for col in range(9):
-            if Arr[row][col] == 0:
+            if Arr[row][col] == None:
                 return True
     else:
         return False
