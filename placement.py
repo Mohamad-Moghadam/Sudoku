@@ -5,7 +5,7 @@ in this file, we decide where the player have set their numbers and whether it i
 """
 
 
-def placement(board, locat_list):
+def update(board, locat_list):
     row = locat_list[0]
     col = locat_list[1]
     num = locat_list[2]
