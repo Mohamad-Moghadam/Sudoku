@@ -14,15 +14,15 @@ def update(board, inserted, a, b, c):
         print("You can't change the initial sheet!")
         return board
     board[row][column] = inserted[2]
-    colours(board, inserted)
+    colours(board, row, column, inserted[2])
     return board
 
 
-def colours(board, inserted):
+def colours(board, row, column, inserted_value):
     if check_number_row_col(board) and check_3x3_square(board):
-        inserted[2] = f"\033[92m{inserted[2]}\033[0m"
+        board[row][column] = f"\033[92m{inserted_value}\033[0m"
     else:
-        inserted[2] = f"\033[91m{inserted[2]}\033[0m"
+        board[row][column] = f"\033[91m{inserted_value}\033[0m"
     return board
 
     """
