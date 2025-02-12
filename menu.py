@@ -74,7 +74,6 @@ def game(difficulty):
             place[1] = place[1] - 1
             board = update(board, place, a, b, c)
             print(f"\n")
-            breakpoint()
             printing(board, a, b, c)
             check_number_row_col(board)
             check_3x3_square(board)
