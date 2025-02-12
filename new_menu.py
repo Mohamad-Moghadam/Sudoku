@@ -3,6 +3,7 @@ from placement import *
 from colours import *
 import json
 from random import randint
+import copy
 
 def menu():
     print("What is your name? ")
@@ -98,7 +99,7 @@ def game_play(board):
     while Isgood == True:
         print(f"please enter the number of row, column and the number you want to place:\n")
         place = list(map(int, input().split()))
-        board_check = board.copy()
+        board_check = copy.deepcopy(board)
         board_check = update(board_check, place)
         if check_number_row_col(board_check) and check_3x3_square(board_check):
             board = board_check
