@@ -74,6 +74,7 @@ def game(difficulty):
             place[1] = place[1] - 1
             board = update(board, place, a, b, c)
             print(f"\n")
+            breakpoint()
             printing(board, a, b, c)
             check_number_row_col(board)
             check_3x3_square(board)
@@ -103,7 +104,7 @@ def game(difficulty):
             place = list(map(int, input().split()))
             place[0] = place[0] - 1
             place[1] = place[1] - 1
-            board = update(board, place)
+            board = update(board, place, a, b, 0)
             print(f"\n")
             printing(board, a, b, 0)
             check_number_row_col(board)
@@ -132,7 +133,7 @@ def game(difficulty):
             place = list(map(int, input().split()))
             place[0] = place[0] - 1
             place[1] = place[1] - 1
-            board = update(board, place)
+            board = update(board, place, a, 0, 0)
             print(f"\n")
             printing(board, a, 0, 0)
             check_number_row_col(board)
