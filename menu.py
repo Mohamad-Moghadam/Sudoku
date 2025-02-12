@@ -13,43 +13,26 @@ from random import randint
 
 
 def menu():
-    while True:
-        print("What is your name? ")
-        name = input()
-        """with open(
-            "C:/Users/USER/Desktop/kelassor/3rd week/Sudoku/statistics.json",
-            "a",
-            encoding="utf-8",
-        ) as file:
-            json.dump(name, file)
-"""
-        print(f"\nWelcome {name}. \n1. Start game \n2. Statistics \n3. Exit game\n ")
-        choice = int(input())
+    print("What is your name? ")
+    name = input()
+    print(f"\nWelcome {name}. \n1. Start game \n2. Exit game\n ")
+    choice = int(input())
 
-        if choice == 1:
-            print(
-                f"\nwhich mode do you wanna play? \n1. Easy \n2. Medium \n3. Hard \n4. Exit\n"
-            )
-            game_mode = int(input())
-            if game_mode == 1:
-                game(1)
-            elif game_mode == 2:
-                game(2)
-            elif game_mode == 3:
-                game(3)
-            elif game_mode == 4:
-                return
-            """elif choice == 2:
-                with open(
-                    "C:/Users/USER/Desktop/kelassor/3rd week/Sudoku/statistics.json",
-                    "r",
-                    encoding="utf-8",
-                ) as file:
-                    data = json.load(file)
-                print(data)
-                return"""
-        elif choice == 3:
+    if choice == 1:
+        print(
+            f"\nwhich mode do you wanna play? \n1. Easy \n2. Medium \n3. Hard \n4. Exit\n"
+        )
+        game_mode = int(input())
+        if game_mode == 1:
+            game(1)
+        elif game_mode == 2:
+            game(2)
+        elif game_mode == 3:
+            game(3)
+        elif game_mode == 4:
             return
+    elif choice == 2:
+        return
 
 
 """
@@ -92,6 +75,8 @@ def game(difficulty):
             f"please enter the number of row, column and the number you want to place:\n"
         )
         place = list(map(int, input().split()))
+        place[0] = place[0] - 1
+        place[1] = place[1] - 1
         board = update(board, place)
 
         printing(board)
@@ -120,6 +105,8 @@ def game(difficulty):
             f"please enter the number of row, column and the number you want to place:\n"
         )
         place = list(map(int, input().split()))
+        place[0] = place[0] - 1
+        place[1] = place[1] - 1
         board = update(board, place)
 
         printing(board)
@@ -146,6 +133,8 @@ def game(difficulty):
             f"please enter the number of row, column and the number you want to place:\n"
         )
         place = list(map(int, input().split()))
+        place[0] = place[0] - 1
+        place[1] = place[1] - 1
         board = update(board, place)
 
         printing(board)
