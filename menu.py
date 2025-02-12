@@ -69,19 +69,20 @@ def game(difficulty):
             [a, None, None, c, None, None, b, None, None],
             [b, None, None, None, a, None, None, c, None],
         ]
+        print(f"\n")
         printing(board)
-
-        print(
-            f"please enter the number of row, column and the number you want to place:\n"
-        )
-        place = list(map(int, input().split()))
-        place[0] = place[0] - 1
-        place[1] = place[1] - 1
-        board = update(board, place)
-
-        printing(board)
-        check_number_row_col(board)
-        check_3x3_square(board)
+        while True:
+            print(
+                f"please enter the number of row, column and the number you want to place:\n"
+            )
+            place = list(map(int, input().split()))
+            place[0] = place[0] - 1
+            place[1] = place[1] - 1
+            board = update(board, place)
+            print(f"\n")
+            printing(board)
+            check_number_row_col(board)
+            check_3x3_square(board)
 
     elif difficulty == 2:
         a = randint(1, 9)
@@ -99,19 +100,20 @@ def game(difficulty):
             [a, None, None, None, None, None, b, None, None],
             [b, None, None, None, a, None, None, None, None],
         ]
+        print(f"\n")
         printing(board)
-
-        print(
-            f"please enter the number of row, column and the number you want to place:\n"
-        )
-        place = list(map(int, input().split()))
-        place[0] = place[0] - 1
-        place[1] = place[1] - 1
-        board = update(board, place)
-
-        printing(board)
-        check_number_row_col(board)
-        check_3x3_square(board)
+        while True:
+            print(
+                f"please enter the number of row, column and the number you want to place:\n"
+            )
+            place = list(map(int, input().split()))
+            place[0] = place[0] - 1
+            place[1] = place[1] - 1
+            board = update(board, place)
+            print(f"\n")
+            printing(board)
+            check_number_row_col(board)
+            check_3x3_square(board)
 
     elif difficulty == 3:
         a = randint(1, 9)
@@ -127,19 +129,20 @@ def game(difficulty):
             [a, None, None, None, None, None, None, None, None],
             [None, None, None, None, a, None, None, None, None],
         ]
+        print(f"\n")
         printing(board)
-
-        print(
-            f"please enter the number of row, column and the number you want to place:\n"
-        )
-        place = list(map(int, input().split()))
-        place[0] = place[0] - 1
-        place[1] = place[1] - 1
-        board = update(board, place)
-
-        printing(board)
-        check_number_row_col(board)
-        check_3x3_square(board)
+        while True:
+            print(
+                f"please enter the number of row, column and the number you want to place:\n"
+            )
+            place = list(map(int, input().split()))
+            place[0] = place[0] - 1
+            place[1] = place[1] - 1
+            board = update(board, place)
+            print(f"\n")
+            printing(board)
+            check_number_row_col(board)
+            check_3x3_square(board)
 
 
 """
