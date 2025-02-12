@@ -2,6 +2,7 @@
 the menu is located in this file
 """
 
+from finish_game import *
 from check import *
 from placement import *
 from colours import *
@@ -77,6 +78,9 @@ def game(difficulty):
             printing(board, a, b, c)
             check_number_row_col(board)
             check_3x3_square(board)
+            finish_game(board)
+            if finish_game(board) == False:
+                return
 
     elif difficulty == 2:
         a = randint(1, 9)
@@ -108,6 +112,9 @@ def game(difficulty):
             printing(board, a, b, 0)
             check_number_row_col(board)
             check_3x3_square(board)
+            finish_game(board)
+            if finish_game(board) == False:
+                return
 
     elif difficulty == 3:
         a = randint(1, 9)
@@ -137,6 +144,9 @@ def game(difficulty):
             printing(board, a, 0, 0)
             check_number_row_col(board)
             check_3x3_square(board)
+            finish_game(board)
+            if finish_game(board) == False:
+                return
 
 
 """
